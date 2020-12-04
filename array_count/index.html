@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array count</title>
+</head>
+<body>
+  <div style="background-color:#1979a9;padding: 10px;">
+    <h4 style="color: white;">The initial items of the array</h4>
+    <ul id="myList"></ul>
+  </div>
+
+  <div style="background-color: whitesmoke;padding: 10px;">
+    <h4 style="color: #1979a9;">After Adding items in the array</h4>
+    <ul id="myList2"></ul>
+  </div>
+
+</body>
+<script>
+  let places = ["Biratnagar", "Lalitpur", "Patan", "Kathmandu","Pokhara","Palpa"];
+
+  places.forEach((item, index)=>{
+    document.getElementById('myList').innerHTML += `<li style="list-style:none;color:white;"><span style="margin-right:5px;color: white;">${index+1}</span>${item}</li>`
+  })
+  
+  places.splice(3,1, "Chitwan", "Bhaktapur");
+  places.forEach((item, index)=>{
+    document.getElementById('myList2').innerHTML += `<li style="list-style:none;color:#1979a9;"><span style="margin-right:5px;color: #1979a9;">${index+1}</span>${item}</li>`
+  })
+</script>
+</html>
