@@ -9,11 +9,13 @@
   <div style="background-color:#1979a9;padding: 10px;">
     <h4 style="color: white;">The initial items of the array</h4>
     <ul id="myList"></ul>
+    <p id="array1"></p>
   </div>
 
   <div style="background-color: whitesmoke;padding: 10px;">
     <h4 style="color: #1979a9;">After Adding items in the array</h4>
     <ul id="myList2"></ul>
+    <p id="array2"></p>
   </div>
 
 </body>
@@ -23,10 +25,12 @@
   places.forEach((item, index)=>{
     document.getElementById('myList').innerHTML += `<li style="list-style:none;color:white;"><span style="margin-right:5px;color: white;">${index+1}</span>${item}</li>`
   })
+  document.getElementById('array1').textContent = "The length of array is:"+places.length
   
   places.splice(3,1, "Chitwan", "Bhaktapur");
   places.forEach((item, index)=>{
     document.getElementById('myList2').innerHTML += `<li style="list-style:none;color:#1979a9;"><span style="margin-right:5px;color: #1979a9;">${index+1}</span>${item}</li>`
   })
+  document.getElementById('array2').textContent = "The length of array is:"+places.length
 </script>
 </html>
